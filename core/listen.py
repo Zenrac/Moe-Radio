@@ -326,7 +326,7 @@ class listenmoe:
                         artist = now['d']['song']['artists'][0]['nameRomaji']
                     elif 'name' in artists:
                         artist = now['d']['song']['artists'][0]['name']
-                except:
+                except KeyError:
                     artist = False
                 title = now['d']['song']['title']
                 if artist:
