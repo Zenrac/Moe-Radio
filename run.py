@@ -7,7 +7,6 @@ ascii = """
                                                                                                                                      
 -----------------"""  
 
-import os
 import sys
 import logging
 
@@ -38,7 +37,6 @@ def run():
     except Exception as e:
         log.warning(f"Closing bot : {e}")
         bugger_off()
-        os.system("PAUSE")
         
 if __name__ == "__main__":
     run()
