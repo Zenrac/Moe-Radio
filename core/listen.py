@@ -190,7 +190,7 @@ class listenmoe:
         """
             {prefix}np
             
-        {help}
+        Displays the current song informations.
         """
         player = self.bot.lavalink.players.get(ctx.guild.id)         
         current = player.current # stock it into a var avoid changes between the beg and the end of the command
@@ -228,7 +228,7 @@ class listenmoe:
             {prefix}linked reset
             {prefix}linked now
     
-        {help}
+        Manages the linked channel on this server.
         """                       
         if ctx.invoked_subcommand is None: 
             return await ctx.invoke(self.linked_set, new_channel=leftover_args)    
@@ -238,7 +238,7 @@ class listenmoe:
         """   
             {prefix}linked now
     
-        {help}
+        Displays the current linked channel on this server.
         """ 
         if isinstance(ctx.channel, discord.abc.PrivateChannel):
             return
@@ -262,7 +262,7 @@ class listenmoe:
             {prefix}linked set [channel]
             {prefix}linked set never    
     
-        {help}
+        Sets the current linked channel on this server.
         """               
         if isinstance(ctx.channel, discord.abc.PrivateChannel):
             return
@@ -285,7 +285,7 @@ class listenmoe:
         """   
             {prefix}linked reset
     
-        {help}
+        Resets the current linked channel on this server.
         """ 
         if not ctx.channel.permissions_for(ctx.author).manage_guild:
             raise commands.errors.CheckFailure 
