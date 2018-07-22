@@ -29,7 +29,6 @@ def run():
         print(ascii)
         print("Connecting...\n")
         m.run()
-        restarting = False
 
 if __name__ == "__main__":
     run()
