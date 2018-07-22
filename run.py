@@ -7,6 +7,7 @@ ascii = """
                                                                                                                                      
 -----------------"""  
 
+import os
 import sys
 import logging
 
@@ -23,12 +24,21 @@ sh.setFormatter(logging.Formatter(
 sh.setLevel(logging.INFO)
 log.addHandler(sh)
 
+def bugger_off(msg="Press enter to continue . . .", code=1):
+    input(msg)
+    sys.exit(code)
+
 def run():
+    try:
         from core.bot import Moe
         m = Moe()
         print(ascii)
         print("Connecting...\n")
         m.run()
-
+    except Exception as e:
+        log.warning(f"Closing bot : {e}")
+        bugger_off()
+        os.system("PAUSE")
+        
 if __name__ == "__main__":
     run()
