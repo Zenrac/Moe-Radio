@@ -51,12 +51,10 @@ class listenmoe:
     async def start(self):
         kp = listen.client.Client(kpop=True)
         kp.register_handler(self.handkpop)
-        await kp.create_websocket_connection()
         kp.loop.create_task(kp.start())
         
         cl = listen.client.Client()
         cl.register_handler(self.hand)
-        await cl.create_websocket_connection()
         cl.loop.create_task(cl.start())        
 
     async def track_hook(self, event):
