@@ -13,3 +13,10 @@ Moe-Radio is a very simple discord bot for LISTEN.moe (J-POP and K-POP) using di
 - Install Lavalink.py, Listen and discord.py (rewrite)<br>
 - Download Lavalink.jar (V3) and run it with Java 9+ (tested on Java 10)<br>
 - Start run.sh (linux) or run.bat (windows)<br>
+<br><br>
+## Commands :<br>
+- (prefix)play or (prefix)play kpop : starts a radio
+- (prefix)kpop : same as (prefix)play kpop
+- (prefix)np : displays the current song
+- (prefix)volume : adjusts the current player volume
+- (prefix)stop : disconnects the bot
