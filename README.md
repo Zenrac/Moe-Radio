@@ -7,7 +7,7 @@ Moe-Radio is a very simple discord bot for LISTEN.moe (J-POP and K-POP) using di
 - [discord.py (rewrite)](https://github.com/Rapptz/discord.py/tree/rewrite)
 - [Lavalink.py](https://github.com/Devoxin/Lavalink.py)
 - [Listen](https://github.com/Yarn/Listen)
-<br>
+<br><br>
 ## How to use :<br>
 - You have to edit ```config/settings.json``` by adding your token, your ID and the prefix you want.<br>
 - Install Lavalink.py, Listen and discord.py (rewrite)<br>
