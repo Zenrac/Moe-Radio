@@ -1,6 +1,8 @@
 # Moe-Radio
 
-Moe-Radio is a very simple discord bot for LISTEN.moe (J-POP and K-POP) using discord.py (rewrite). It only have about 5 commands.<br><br>- You can link a voice channel to make the bot plays the radio forever.<br> - The now playing message is editing itself displaying which current song is playing.
+Moe-Radio is a very simple discord bot for LISTEN.moe (J-POP and K-POP) using discord.py (rewrite). It only have about 5 commands.<br><br>
+- You can link a voice channel to make the bot plays the radio forever.<br> 
+- The now playing message is editing itself displaying which current song is playing.
 
 ## Requirements :<br>
 - Python 3.6+<br>
