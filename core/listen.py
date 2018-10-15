@@ -240,8 +240,8 @@ class listenmoe:
         """ 
         if isinstance(ctx.channel, discord.abc.PrivateChannel):
             return
-        else:
-            sid = str(ctx.guild.id)  
+        
+        sid = str(ctx.guild.id)  
                         
         if sid in self._linked:    
             channel = discord.utils.find(lambda m: m.id == self._linked[sid], ctx.guild.channels)
@@ -249,9 +249,9 @@ class listenmoe:
                 self._linked.pop(sid, None)
                 dataIO.save_json(self._linked_file, self._linked)    
                 return await ctx.invoke(self.linked_list)
-            return await ctx.send("I'm currently linked to the {} voice channel.".format(f"`{channel}`"))               
+            await ctx.send("I'm currently linked to the {} voice channel.".format(f"`{channel}`"))               
         else:
-            return await ctx.send("I'm not linked to any voice channel on this server.")
+            await ctx.send("I'm not linked to any voice channel on this server.")
 
     @checks.has_permissions(manage_guild=True)               
     @linked.command(name="set", aliases=["add", "are", "config"])
@@ -264,8 +264,8 @@ class listenmoe:
         """               
         if isinstance(ctx.channel, discord.abc.PrivateChannel):
             return
-        else:
-            sid = str(ctx.guild.id)  
+        
+        sid = str(ctx.guild.id)  
             
         try:    
             channel = [c for c in ctx.guild.channels if (str(c.id) == new_channel or isinstance(new_channel, str) and c.name.lower() == new_channel.lower()) and isinstance(c, discord.VoiceChannel)][0]
@@ -300,10 +300,8 @@ class listenmoe:
         """A check which applies to all commands in Music"""
         if not isinstance(ctx.channel, discord.abc.PrivateChannel):
             return True            
-        if ctx.invoked_with == 'help' or ctx.author.id == self.bot.settings['OWNER_ID']:
-            return True
         if not ctx.guild:
-            await ctx.send('```py\n{}\n```'.format("Sorry, my musical commands are disabled in DMs."))
+            await ctx.send('```py\n{}\n```'.format("Sorry, my music commands are disabled in DMs."))
             return False
         return True         
             
