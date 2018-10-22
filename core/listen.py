@@ -194,7 +194,7 @@ class listenmoe:
         current = player.current # stock it into a var avoid changes between the beg and the end of the command
         
         if not current:
-            return await ctx.send(get_str(ctx, "not-playing"), delete_after=20)
+            return await ctx.send("I'm not playing anything!", delete_after=20))
      
         if 'kpop' in current.uri.lower():
             color=int("3CA4E9", 16)
