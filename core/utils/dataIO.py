@@ -2,8 +2,6 @@ import json
 import os
 from random import randrange
 
-class InvalidFileIO(Exception):
-    pass
 
 class DataIO():
     def __init__(self):
@@ -32,8 +30,9 @@ class DataIO():
 
     def really_save_json(self, filename, data):
         with open(filename, encoding='utf-8', mode="w") as f:
-            json.dump(data, f, indent=4,sort_keys=True,
-                separators=(',',' : '))
+            json.dump(data, f, indent=4, sort_keys=True,
+                      separators=(',', ' : '))
         return data
+
 
 dataIO = DataIO()
