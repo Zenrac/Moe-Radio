@@ -1,7 +1,7 @@
 import discord  # noqa: E902 idk too
 import logging
 import lavalink
-import listen
+import listenmoe as listen
 
 from .utils.dataIO import dataIO
 from discord.ext import commands
